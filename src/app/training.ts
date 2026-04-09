@@ -60,9 +60,9 @@ const users: IUser[] = [
     }
 ]
 
-const happyUser: IUser[] = users.filter((user: IUser) => !user.isMarried);
+const happyUser: IUser[] = users.filter((user: IUser): boolean => !user.isMarried);
 
-happyUser.forEach(user => {
+happyUser.forEach((user: IUser): void => {
     console.log(`Самый довольный тут: ${user.name}`);
 })
 
