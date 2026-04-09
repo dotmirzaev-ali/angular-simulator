@@ -19,7 +19,9 @@ function sum(a: number, b: number): number {
     return a + b;
 }
 
-function formatText(text: string, format: "uppercase" | "lowercase" | "capitalize"): string {
+type FormatType = "uppercase" | "lowercase" | "capitalize";
+
+function formatText(text: string, format: FormatType): string {
     if (format === "uppercase") {
         return text.toUpperCase();
     } else if (format === "lowercase") {
@@ -58,7 +60,7 @@ const users: IUser[] = [
     }
 ]
 
-const happyUser: IUser[] = users.filter(user => !user.isMarried);
+const happyUser: IUser[] = users.filter((user: IUser) => !user.isMarried);
 
 happyUser.forEach(user => {
     console.log(`Самый довольный тут: ${user.name}`);
