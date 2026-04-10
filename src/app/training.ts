@@ -10,7 +10,7 @@ interface IUser {
     isMarried: boolean;
 }
 
-interface IPosition extends IUser {
+interface IEmployee extends IUser {
     role: string;
     salary: number;
 }
@@ -62,8 +62,8 @@ const users: IUser[] = [
 
 const happyUser: IUser[] = users.filter((user: IUser): boolean => !user.isMarried);
 
-happyUser.forEach((user: IUser): void => {
+happyUser.forEach((user: IUser) => {
     console.log(`Самый довольный тут: ${user.name}`);
-})
+});
 
 
