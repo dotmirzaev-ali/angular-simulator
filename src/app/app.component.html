@@ -1,1 +1,70 @@
-<h1 style="display: flex; justify-content: center; font-family: sans-serif;">NGX SIMULATOR</h1>
+<header class="header">
+  <div class="super-header">
+    <div class="container super-header-container">
+      <div class="logo">
+        <a href="/">
+          <img class="logo-image" src="/images/header-icon.svg" alt="Rumtibet">
+          <h1 class="logo-text fs-16 bold">{{ companyName }}</h1>
+        </a>
+      </div>
+      <nav class="nav fs-18 semi-bold">
+        <a href="#main">Главная</a>
+        <a href="#guide">Про гида</a>
+        <a href="#program">Программа тура</a>
+        <a href="price">Стоимость</a>
+        <a href="blog">Блог</a>
+        <a href="contacts">Контакты</a>
+      </nav>
+      <button id="consultation-btn">Консультация</button>
+    </div>
+  </div>
+  
+  <section class="main-header">
+    <h1 class="main-header-title fw-regular">Насладись прогулкой в горах <br>
+      с командой единомышленников
+    </h1>
+    <div class="program-select-container">
+      <div class="select">
+        <select id="location" class="date-capture">
+          <option>Локация для тура</option>
+          <img src="/images/vector-icon.svg" alt="Выбор из списка">
+        </select>
+        <label>выберите из списка</label>
+      </div>
+      
+      <div class="select">
+        <input id="select-date" type="date" date-placeholder="Дата похода" class="date-capture
+        date-placeholder-text" required>
+        <label for="">укажите дату</label>
+      </div>
+      
+      <div class="select">
+        <select id="participants" class="date-capture">
+          <option>Участники</option>
+        </select>
+        <label>выберите из списка</label>
+      </div>
+      <button id="find-program" class="search-program-btn fs-16 bold">Найти программу</button>
+    </div>
+  </section>
+</header>
+
+
+
+<!--<div class="super-header container">-->
+<!--  <div class="logo">-->
+<!--    <a href="">-->
+<!--      <img src="/images/header-icon.svg" alt="Румтибет">-->
+<!--    </a>-->
+<!--  </div>-->
+<!--  -->
+<!--  <nav class="nav-items">-->
+<!--    <a class="nav-item" href="#main">Главная</a>-->
+<!--    <a class="nav-item" href="#about-guide">Про гида</a>-->
+<!--    <a class="nav-item" href="programm">Программа тура</a>-->
+<!--    <a class="nav-item" href="price">Стоимость</a>-->
+<!--    <a class="nav-item" href="blog">Блог</a>-->
+<!--    <a class="nav-item" href="contacts">Контакты</a>-->
+<!--  </nav>-->
+<!--  <button type="button" class="advice-btn general-btn">Консультация</button>-->
+<!--</div>-->

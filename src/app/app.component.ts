@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import  './training';
+import  { Colors } from "../enums/color";
+import './training'
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,25 @@ import  './training';
 })
 export class AppComponent {
 
+    companyName = 'РУМТИБЕТ';
+
+    constructor() {
+        this.saveLoginData();
+        this.updateLoginCount();
+    }
+
+    hasColor(value: Colors): boolean {
+        return [Colors.RED, Colors.BLUE, Colors.GREEN].includes(value);
+    }
+
+    saveLoginData(): void {
+        const date: string = new Date().toString();
+        localStorage.setItem('last-visit', date);
+    }
+
+    updateLoginCount(): void {
+        const visits = localStorage.getItem('visitCount');
+        const newVisits: number = Number(visits) + 1;
+        localStorage.setItem('visitCount', newVisits.toString());
+    }
 }
