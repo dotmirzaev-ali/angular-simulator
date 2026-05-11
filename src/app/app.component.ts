@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import  { Colors } from "../enums/color";
+import  { Color } from "../enums/Color";
 import './training'
 
 @Component({
@@ -10,15 +10,15 @@ import './training'
 })
 export class AppComponent {
 
-    companyName = 'РУМТИБЕТ';
+    companyName: string = 'РУМТИБЕТ';
 
     constructor() {
         this.saveLoginData();
         this.updateLoginCount();
     }
 
-    hasColor(value: Colors): boolean {
-        return [Colors.RED, Colors.BLUE, Colors.GREEN].includes(value);
+    isPrimaryColor(value: Color): boolean {
+        return [Color.RED, Color.BLUE, Color.GREEN].includes(value);
     }
 
     saveLoginData(): void {
@@ -27,7 +27,7 @@ export class AppComponent {
     }
 
     updateLoginCount(): void {
-        const visits = localStorage.getItem('visitCount');
+        const visits: string | null= localStorage.getItem('visitCount');
         const newVisits: number = Number(visits) + 1;
         localStorage.setItem('visitCount', newVisits.toString());
     }

@@ -27,12 +27,24 @@ export class Collection<T> {
     }
 }
 
-const users = new Collection([
+interface IUser {
+    id: number;
+    name: string;
+    city: string;
+}
+
+interface ITour {
+    id: number;
+    name: string;
+    price: number;
+}
+
+const users = new Collection<IUser>([
     { id: 1, name: "Ali", city: "Kulmbach" },
     { id: 2, name: "Vlad", city: "Odessa" },
     { id: 3, name: "Farukh", city: "Tyumen" },
 ]);
-const tours = new Collection([
+const tours = new Collection<ITour>([
     { id: 1, name: "Тибет", price: 50000 },
     { id: 2, name: "Алтай", price: 30000 },
     { id: 3, name: "Кавказ", price: 40000 },
